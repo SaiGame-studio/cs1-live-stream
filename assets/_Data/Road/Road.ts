@@ -7,7 +7,7 @@ export class Road extends Component {
     target: Node = null;
 
     @property({ tooltip: "Ngưỡng khoảng cách Y để kích hoạt di chuyển" })
-    threshold: number = 30;
+    threshold: number = 40;
 
     @property({ tooltip: "Số đơn vị road sẽ di chuyển lên" })
     moveAmount: number = 68;
