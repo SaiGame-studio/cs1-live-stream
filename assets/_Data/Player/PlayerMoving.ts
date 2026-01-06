@@ -4,13 +4,13 @@ const { ccclass, property } = _decorator;
 @ccclass('PlayerMoving')
 export class PlayerMoving extends Component {
     @property
-    maxSpeed: number = 30; // Tốc độ tối đa
+    maxSpeed: number = 16; // Tốc độ tối đa
 
     @property
     acceleration: number = 10; // Gia tốc khi giữ phím
 
     @property
-    deceleration: number = 5; // Độ giảm tốc khi thả phím
+    deceleration: number = 9; // Độ giảm tốc khi thả phím
 
     @property
     horizontalSpeed: number = 8; // Tốc độ di chuyển ngang
