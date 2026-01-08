@@ -1,6 +1,6 @@
 import { _decorator, Component, Node, director, instantiate, Vec3 } from 'cc';
 import { RoadBlockCtrl } from './RoadBlockCtrl';
-import { PlayerMoving } from '../../_Data/Player/PlayerMoving';
+import { PlayerMoving } from '../../_Data/Player/Scripts/PlayerMoving';
 const { ccclass, property, executeInEditMode } = _decorator;
 
 @ccclass('RoadBlockManager')
@@ -98,6 +98,10 @@ export class RoadBlockManager extends Component {
 
     private loadRoadBlocks() {
         this.roadBlocks = this.getComponentsInChildren(RoadBlockCtrl);
+        // Disable tất cả các block sau khi load
+        for (const block of this.roadBlocks) {
+            block.node.active = false;
+        }
     }
 
     private loadSpawnPoints() {
